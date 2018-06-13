@@ -1,0 +1,6 @@
+%% A normal course load
+MAT 119A:Ordinary Differential Equations
+MAT 125B:Real Analysis
+STA 108:Regression Analysis
+STA 131B:Introduction to Mathematical Statistics
+% Please don't delete my plea for help.
