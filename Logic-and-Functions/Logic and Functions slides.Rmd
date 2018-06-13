@@ -1,0 +1,87 @@
+---
+title: |
+  | Logic and Functions
+  | UC Davis Statistics Club
+author: |
+  | Created by:
+  | Christopher Wong
+  | Academic Director
+output: 
+  beamer_presentation:
+    includes:
+      in_header: C:/Users/Christopher/Desktop/Statistics Club/watermark.tex
+# keep_tex: true
+    slide_level: 3
+---
+```{r set-options, echo = FALSE}
+options(width = 50)
+```
+
+### Logic
+
+- Mathematical and logical symbols
+\begin{itemize}
+  \item Less than: \textbf{<}
+  \item Greater than: \textbf{>}
+  \item Less than or equal to: \textbf{<=}
+  \item Greater than or equal to: \textbf{>=}
+  \item Equals: \textbf{==}
+  \item Addition, subtraction, multiplication, division: \textbf{+, -, *, /}
+  \item Modulus: \textbf{\%\%}
+  \item And: \textbf{\&} and \textbf{\&\&}
+  \item Or: \textbf{$\mid$} and \textbf{$\parallel$}
+  \begin{itemize}
+    \item $\&$ and $\mid$ performs elementwise comparisons, $\&\&$ and $\parallel$ is more appropriate for control-flow (e.g. loops)
+  \end{itemize}
+  \item Not: \textbf{!}
+\end{itemize}
+
+### Logical statements and Loops
+
+- Logical statements
+\begin{itemize}
+  \item if(statement)\{code\} evaluates if the statement is TRUE or FALSE. If TRUE, then the code is run.
+  \item else\{code\} comes after an if(statement) and the code is run when the if(statement) returns FALSE.
+  \item else if(statement)\{code\} adds additional if(statement) to the code if the first if(statment) returns FALSE.
+  \item ifelse(statement, TRUE, FALSE) is a compact way of writing an if and else statement.
+  \item while(statement)\{code\} continues to run until the statement is FALSE
+\end{itemize}
+
+----
+
+- Loops
+\begin{itemize}
+  \item for(i in 1:length(foo)){} For loops are not recommended as they are slow in R. Instead, we use
+  \item sapply(1:length(foo), function()) for vectors and data frames and
+  \item lapply(1:length(foo), function()) for lists
+  \item aggregate(data, by = list(), FUN = function) applies the function to the data after splitting them into subsets based on factors specified in by = list().
+\end{itemize}
+
+### Writing your own functions
+
+- R gives you the ability to write your own functions with **function()**
+
+```{r, eval = FALSE, comment = "#"}
+# This is where you will combine your R knowledge
+# (subsetting, logical statements, loops, basic functions).
+example.func = function(variables){
+  Code goes here.
+  return (Results)
+}
+```
+
+---
+
+- Data sampler/subsetter
+- Probability and simulation
+- Confidence intervals and visualization
+- Data destroyer/cleaner
+- Outlier finder
+
+### Bonus Topics
+
+- Contrast of simulation and theory
+\begin{itemize}
+  \item Limits and infinite sums
+  \item Fibonacci numbers
+\end{itemize}
