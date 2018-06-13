@@ -1,0 +1,102 @@
+---
+title: Data Cleaning
+subtitle: UC Davis Statistics Club
+author: |
+  | Created by:
+  | Christopher Wong
+  | Academic Director
+output:
+  beamer_presentation:
+    slide_level: 3
+---
+```{r set-options, echo = FALSE}
+options(width = 50)
+```
+
+### Introduction to Data Cleaning
+
+- Data cleaning is the process of detecting and correcting (or removing) corrupt or inaccurate records from a record set, table, or database.
+
+- Data is not always clean. This is the case in today's world where massive amounts of data are being collected and they are not necessarily formatted nicely.
+
+- In fact, in practice it is often the case that a data analyst will spend more time cleaning their data than performing statistical analysis.
+
+- [\textcolor{blue}{A great resource}](https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf)
+
+### Reading Data
+
+- The first step to cleaning data is to read it into a program such as R
+
+- We will use the following functions to read in our data:
+\begin{itemize}
+  \item read.table      \textcolor{blue}{Tabular data stored in textual format}
+  \item read.csv        \textcolor{blue}{Comma separated values with period as decimal separator}
+  \item read.csv2       \textcolor{blue}{Semicolon separated values with comma as decimal separator}
+  \item read.delim      \textcolor{blue}{Tab-delimited files with period as decimal separator}
+  \item read.delim2     \textcolor{blue}{Tab-delimited files with comma as decimal separator}
+  \item readLines       \textcolor{blue}{Reads in the text line-by-line}
+  \item read.xlsx or read\_excel       \textcolor{blue}{Reads in Excel files. Type library(xlsx) (requires packages "rJava" and "xlsxjars") or the "readxl" package.}
+\end{itemize}
+- Arguments for each: header, col.names, na.strings, colClasses, stringsAsFactors
+
+
+### Inspecting the Data
+
+- nrow
+- ncol 
+- length
+- head
+- tail
+- dim
+- class
+- which
+- unique
+- names
+- range
+- table 
+- summary
+- typeof
+- str
+
+### Type conversion
+
+- Modes: numeric, complex, character, logical, list, function
+- Class: How generic functions operate with it, usually same as mode if not assigned
+- Typeof: The type of C structure that is used to store a basic type
+
+- Coercion in R:
+\begin{itemize}
+  \item as.numeric
+  \item as.integer
+  \item as.character
+  \item as.logical
+  \item as.factor
+\end{itemize}
+
+- Recoding factors
+
+### String / character manipulation
+
+- String normalization
+
+- grep, grepl, gsub, strsplit, Regular expressions
+
+- str_trim from the library "stringr"
+
+
+### Detection of errors
+
+- Missing values
+
+- Special values
+
+- Outliers
+
+- Inconsistencies
+
+### Before we get started
+
+- Go to the \textcolor{blue}{Statistics Club Google Drive} $\rightarrow$ \textcolor{blue}{Case Studies and Programming Workshops}
+- Download \textcolor{blue}{Data Cleaning Back-up Functions}
+- \textcolor{blue}{Data Cleaning Examples} $\rightarrow$ Download them all
+- Also install the packages \textcolor{blue}{"readxl"} and \textcolor{blue}{"stringr"}
